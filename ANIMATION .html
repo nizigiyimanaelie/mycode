@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animation</title>
+	<link href="tools/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="tools/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="tools/css/style.css" rel="stylesheet" />
+     <link href="tools/css/myStlye.css" rel="stylesheet" />
+     <link href="style.css" rel="stylesheet" />
+     <style type="text/css">
+     	form{
+     		background: linear-gradient(blue,yellow,pink);
+     		animation: animate 1s linear infinite;}
+     		@keyframes animate{
+     0%{
+     	filter: hue-rotate(0deg);
+     		}
+     		100%{
+     			filter: hue-rotate(360deg);
+     		}
+     }
+     	}
+     	input{
+     		border: none;
+     		border-bottom: blue 5px solid;
+     		width: 50%;
+
+     	}
+     </style>
+</head>
+<body><center><br><br><br><br><br><br>
+	<div class="mastre1 card-header shadow p-3 rounded" style="width: 50%;">
+		<div class="row">
+			<div class="col">
+				<form><br><br>
+					<input type="text" name="username" placeholder="enter your name here" style="width: 50%; border-bottom: blue 3px solid;"><br><br>
+					<input type="text" name="email" placeholder="enter your email here" style="width: 50%; border-bottom: blue 3px solid;"><br><br><input type="date" name="date" placeholder=" enter your birth day here" style="width: 50%; border-bottom: blue 3px solid;"><br><br><input type="password" name="password" placeholder="enter your password" style="width: 50%; border-bottom: blue 3px solid;"><br><br><br>
+			</div>
+		</div></div>
+		<div class="mastre1 card-header shadow p-3rounded" style="background-color: lightblue; width: 50%;">
+			<div class="row" style="background-color: lightblue;">
+				<div class="col" ><button name="login">login</button></div>
+			</div></div>
+</form>
+</body>
+</html>

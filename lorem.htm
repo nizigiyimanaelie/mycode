@@ -1,0 +1,77 @@
+<?php
+include 'connect.php'; 
+if (isset($_POST['submit'])) {
+	$firs_tname=$_POST['firs_tname'];
+	$second_name=$_POST['second_name'];
+	$password=$_POST['password'];
+	$result=mysqli_query($con,"insert into kibimba(firs_tname,second_name,password)values('$firs_tname','$second_name','$password')")
+	if ($result) {
+		die(mysqli_error($con));
+		echo "student inserted";
+		header("refresh:2","lorem.php");
+	}
+
+}
+ ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form</title>
+	<link href="tools/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="tools/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="tools/css/style.css" rel="stylesheet" />
+     <link href="tools/css/myStlye.css" rel="stylesheet" />
+     <link href="style.css" rel="stylesheet" />
+     <style type="text/css">
+
+     	input:hover{
+     		background-color: green;
+     	}
+     	a:hover{background-color: grey;
+
+     	}
+     </style>
+</head>
+<body style="background-color: green;">
+	<div class="card-header shadow p-3 rounded">
+		<div class="row">
+			<div class="col" style="border: none; border-bottom: blue 2px solid; font-size: 50px; color: blue;">
+				<center>coperative agro farming in ngoma</center>
+			</div>
+			<div class="container shadow p-3 rounded text-center">
+				<a href="" class="btn btn-info">home</a>
+				<a href="" class="btn btn-success">profile</a>
+				<a href="" class="btn btn-primary">groupe</a>
+				<a href="" class="btn btn-warning">message</a>
+				<a href="" class="btn btn-danger"> chart</a>
+				<a href="" class="btn btn-primary"> result</a>
+			</div>
+		</div></div>
+		<center><div class="master1 contain-fluid shadow p-3 rounded text-center" style="background-color: grey; width: 50%; text-align: center; color: white; font-size: 30px;">agriculture and farming in ngoma </div>
+			<div class="row">
+				<div class="col"><form method="POST" action="#" style="background-color: white; width: 50%; height: 100%; border-radius: 15px; border-color: orange;"><br><input type="text-center" name="firs_tname" class="form-control" placeholder="please enter your name first here" style="border-bottom: grey 4px solid;"><br><br>
+				<input type="text" name="second_name" class="form-control" placeholder="plese enter your name last here" style="border-bottom: grey 4px solid;"><br><br>
+				<input type="password" name="password" class="form-control" placeholder="please enter your password here" style="border-bottom: grey 4px solid;"><br><br>
+				 </div></div>
+			<div class="master1 contain-fluid shadow p-3 rounded text-center" style="background-color: skyblue; width: 50%; text-align: center; color: white; font-size: 30px;"><button class="btn btn-warning">submit</button> </div></center><br><br><br><br><br><div class="card-header shadow p-3 rounded text-center">
+				<div class="row" style="background-color: skyblue; font-size: 30px;">
+					<div class="row" style="height: 60px;"><center><i>wellcome to joine us</i></center></center></div></div></div></form></div></div></center>
+</body>
+</html>
